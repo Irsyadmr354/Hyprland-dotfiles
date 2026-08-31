@@ -1,0 +1,109 @@
+configuration {
+    modi: "drun";
+    icon-theme: "Papirus";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 4; /* Left Center */
+    anchor: "left";
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "󰀻";
+    sidebar-mode: false;
+}
+
+@theme "/dev/null"
+
+* {
+    bg-col:       #2e3440;
+    bg-sub:       #3b4252;
+    bg-active:    #434c5e;
+    border-col:   #88c0d0;
+    selected-col: #88c0d0;
+    fg-col:       #eceff4;
+    fg-muted:     #d8dee9;
+    grey:         #4c566a;
+    font:         "JetBrainsMono Nerd Font 11";
+    border-radius: 0px;
+    background-color: transparent;
+    text-color:   @fg-col;
+    margin:       0px;
+    padding:      0px;
+    spacing:      0px;
+}
+
+window {
+    height: 100%;
+    width: 320px;
+    location: west;
+    anchor: west;
+    border: 0px 2px 0px 0px;
+    border-color: @border-col;
+    background-color: #2e3440;
+}
+
+mainbox {
+    background-color: #2e3440;
+    padding: 16px 12px;
+    children: [ inputbar, listview ];
+    spacing: 12px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: #3b4252;
+    border: 1px;
+    border-color: #434c5e;
+    padding: 6px;
+    spacing: 8px;
+}
+
+prompt {
+    background-color: transparent;
+    padding: 0px 4px;
+    text-color: @border-col;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+entry {
+    padding: 0px 4px;
+    text-color: @fg-col;
+    background-color: transparent;
+    placeholder: "Search apps...";
+    placeholder-color: @grey;
+}
+
+listview {
+    border: 0px;
+    padding: 4px 0px;
+    columns: 1;
+    lines: 20;
+    background-color: transparent;
+    spacing: 4px;
+}
+
+element {
+    padding: 8px 10px;
+    background-color: transparent;
+    text-color: @fg-col;
+    border-radius: 0px;
+    spacing: 12px;
+}
+
+element-icon {
+    size: 24px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element selected {
+    background-color: @border-col;
+    text-color: #2e3440;
+    font-weight: bold;
+}

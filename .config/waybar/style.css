@@ -1,0 +1,160 @@
+/* NORD THEME PALETTE:
+   Polar Night: #2e3440, #3b4252, #434c5e, #4c566a
+   Snow Storm:  #d8dee9, #e5e9f0, #eceff4
+   Frost:       #8fbcbb, #88c0d0, #81a1c1, #5e81ac
+   Aurora:      #bf616a, #d08770, #ebcb8b, #a3be8c, #b48ead
+*/
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: #2e3440;
+    border-bottom: 2px solid #434c5e;
+    color: #eceff4;
+}
+
+/* ARCH LOGO */
+#custom-arch {
+    color: #88c0d0;
+    font-size: 14px;
+    padding: 0 10px;
+    background-color: #3b4252;
+    border-right: 1px solid #4c566a;
+}
+
+#custom-arch:hover {
+    background-color: #434c5e;
+    color: #8fbcbb;
+}
+
+/* WORKSPACES */
+#workspaces {
+    background-color: transparent;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: #d8dee9;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #eceff4;
+    background-color: #3b4252;
+}
+
+#workspaces button.active {
+    color: #88c0d0;
+    border-bottom: 2px solid #88c0d0;
+    background-color: #3b4252;
+}
+
+#workspaces button.urgent {
+    color: #bf616a;
+    border-bottom: 2px solid #bf616a;
+}
+
+/* WINDOW TITLE */
+#window {
+    color: #d8dee9;
+    padding: 0 12px;
+    font-weight: 500;
+}
+
+#window span {
+    color: #81a1c1;
+    font-weight: bold;
+}
+
+/* CENTER CLOCK */
+#clock {
+    color: #eceff4;
+    background-color: #3b4252;
+    border-left: 1px solid #4c566a;
+    border-right: 1px solid #4c566a;
+    padding: 0 14px;
+}
+
+/* RIGHT MODULES */
+#pulseaudio,
+#backlight,
+#bluetooth,
+#network,
+#cpu,
+#memory,
+#disk,
+#battery,
+#custom-notification {
+    padding: 0 8px;
+    margin: 2px 1px;
+    background-color: #3b4252;
+    border: 1px solid #434c5e;
+    color: #eceff4;
+    transition: all 0.15s ease;
+}
+
+#pulseaudio:hover,
+#backlight:hover,
+#bluetooth:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#battery:hover,
+#custom-notification:hover {
+    background-color: #434c5e;
+    border-color: #4c566a;
+}
+
+/* Nord Colors */
+#pulseaudio { color: #ebcb8b; }
+#backlight  { color: #ebcb8b; }
+#bluetooth  { color: #81a1c1; }
+#network    { color: #a3be8c; }
+#cpu        { color: #88c0d0; }
+#memory     { color: #d08770; }
+#disk       { color: #b48ead; }
+#battery    { color: #a3be8c; }
+
+#pulseaudio.muted {
+    background-color: #bf616a;
+    color: #2e3440;
+    border-color: #bf616a;
+}
+
+#network.disconnected {
+    border-color: #bf616a;
+    color: #bf616a;
+}
+
+#battery.charging, #battery.plugged {
+    color: #8fbcbb;
+}
+
+#battery.warning:not(.charging) {
+    border-color: #d08770;
+    color: #d08770;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #bf616a;
+    color: #2e3440;
+    border-color: #bf616a;
+}
+
+#custom-notification {
+    color: #88c0d0;
+    padding: 0 10px;
+}
