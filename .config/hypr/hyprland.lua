@@ -172,6 +172,7 @@ hl.bind(mainMod .. " + J",     hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + W",     hl.dsp.exec_cmd("~/.config/hypr/scripts/change_wallpaper.sh"))
 hl.bind(mainMod .. " + N",     hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mainMod .. " + L",     hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + X",     hl.dsp.exec_cmd("~/.config/hypr/scripts/powermenu.sh"))
 hl.bind(mainMod .. " + M",     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 -- Focus window with arrow keys & vim keys
