@@ -1,0 +1,41 @@
+* {
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+window {
+    background: #2e3440;
+    border: 2px solid #88c0d0;
+    border-radius: 0px;
+    padding: 12px;
+}
+
+#container {
+    margin: 8px;
+}
+
+image, label {
+    color: #88c0d0;
+}
+
+progressbar:disabled,
+image:disabled {
+    opacity: 0.5;
+}
+
+progressbar {
+    min-height: 8px;
+    border-radius: 0px;
+    background: #3b4252;
+    border: 1px solid #434c5e;
+}
+
+progressbar trough {
+    background-color: #3b4252;
+    border-radius: 0px;
+}
+
+progressbar progress {
+    background: linear-gradient(90deg, #88c0d0, #81a1c1);
+    border-radius: 0px;
+}
