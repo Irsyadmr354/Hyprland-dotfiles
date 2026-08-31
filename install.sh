@@ -76,6 +76,14 @@ PACKAGES=(
     imv
     btop
     fastfetch
+    nano
+
+    # Keyring & Security for Apps (VS Code, Chrome, etc)
+    gnome-keyring
+    libsecret
+    seahorse
+    gcr
+    gcr-4
 
     # File Manager & KDE tools
     dolphin
@@ -116,8 +124,8 @@ PACKAGES=(
 sudo pacman -S --needed --noconfirm "${PACKAGES[@]}"
 
 # 4. Install AUR Packages
-echo -e "${YELLOW}==> [4/7] Installing AUR packages (bluetuith, google-chrome)...${NC}"
-yay -S --needed --noconfirm bluetuith-bin google-chrome
+echo -e "${YELLOW}==> [4/7] Installing AUR packages (bluetuith, google-chrome, visual-studio-code)...${NC}"
+yay -S --needed --noconfirm bluetuith-bin google-chrome visual-studio-code-bin
 
 # 5. Deploy Dotfiles (.config & Wallpapers)
 echo -e "${YELLOW}==> [5/7] Deploying configuration files...${NC}"
@@ -140,6 +148,34 @@ sudo ln -sf /usr/bin/kitty /usr/bin/konsole
 # Configure KDE globals for default terminal
 kwriteconfig6 --file kdeglobals --group General --key TerminalApplication "kitty" 2>/dev/null || true
 kwriteconfig6 --file kdeglobals --group General --key TerminalService "kitty.desktop" 2>/dev/null || true
+
+# Configure Default Text Editor (VS Code) & Nano for Terminal
+mkdir -p "$HOME/.config"
+cat << 'MIMEOF' > "$HOME/.config/mimeapps.list"
+[Default Applications]
+text/plain=code.desktop
+text/markdown=code.desktop
+text/x-markdown=code.desktop
+text/x-c=code.desktop
+text/x-c++=code.desktop
+text/x-python=code.desktop
+text/x-shellscript=code.desktop
+application/x-shellscript=code.desktop
+application/json=code.desktop
+text/javascript=code.desktop
+text/html=google-chrome.desktop
+text/css=code.desktop
+text/x-go=code.desktop
+text/x-java=code.desktop
+text/x-lua=code.desktop
+application/xml=code.desktop
+text/xml=code.desktop
+text/x-yaml=code.desktop
+application/x-yaml=code.desktop
+MIMEOF
+
+# Set default terminal editor in ~/.bashrc
+grep -q "export EDITOR=nano" "$HOME/.bashrc" 2>/dev/null || echo -e "\n# Default Terminal Editor\nexport EDITOR=\"nano\"\nexport VISUAL=\"nano\"" >> "$HOME/.bashrc"
 
 # Initialize standard user directories
 xdg-user-dirs-update

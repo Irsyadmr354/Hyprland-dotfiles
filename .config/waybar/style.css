@@ -43,8 +43,8 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 8px;
-    color: #d8dee9;
+    padding: 0 9px;
+    color: #4c566a; /* Empty workspace is dim */
     background: transparent;
     border-bottom: 2px solid transparent;
     transition: all 0.2s ease;
@@ -55,15 +55,23 @@ window#waybar {
     background-color: #3b4252;
 }
 
+#workspaces button.visible,
+#workspaces button:not(.empty) {
+    color: #ebcb8b; /* Workspace with open apps is warm gold/aurora */
+    font-weight: bold;
+}
+
 #workspaces button.active {
-    color: #88c0d0;
+    color: #88c0d0; /* Active workspace is bright Frost Cyan */
     border-bottom: 2px solid #88c0d0;
     background-color: #3b4252;
+    font-weight: bold;
 }
 
 #workspaces button.urgent {
     color: #bf616a;
     border-bottom: 2px solid #bf616a;
+    background-color: rgba(191, 97, 106, 0.2);
 }
 
 /* WINDOW TITLE */
