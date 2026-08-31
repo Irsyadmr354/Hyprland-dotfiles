@@ -56,7 +56,6 @@ PACKAGES=(
     rofi-wayland
     kitty
     swaybg
-    swayosd
     hyprlock
     hypridle
     swaync
