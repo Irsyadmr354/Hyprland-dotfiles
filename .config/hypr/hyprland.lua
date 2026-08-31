@@ -47,10 +47,10 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -----------------------
 hl.config({
     general = {
-        gaps_in  = 4,
-        gaps_out = 8,
+        gaps_in  = 2,
+        gaps_out = 4,
 
-        border_size = 2,
+        border_size = 1,
 
         col = {
             active_border   = { colors = {"rgba(88c0d0ff)", "rgba(81a1c1ff)"}, angle = 45 },
