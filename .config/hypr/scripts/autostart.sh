@@ -12,12 +12,12 @@ eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh 2>/dev/null)
 export SSH_AUTH_SOCK
 
 # 3. Kill existing instances to prevent duplicates
-killall waybar swaync hyprpaper hypridle 2>/dev/null
+killall waybar swaync swaybg hyprpaper hypridle 2>/dev/null
 
 # 4. Launch Desktop UI components
+~/.config/hypr/scripts/change_wallpaper.sh init &
 waybar &
 swaync &
-hyprpaper &
 hypridle &
 
 # 5. Clipboard Manager (Cliphist)

@@ -55,7 +55,7 @@ PACKAGES=(
     waybar
     rofi-wayland
     kitty
-    hyprpaper
+    swaybg
     hyprlock
     hypridle
     swaync
