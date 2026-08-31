@@ -117,6 +117,7 @@ PACKAGES=(
     ttf-jetbrains-mono-nerd
     noto-fonts
     noto-fonts-emoji
+    noto-fonts-cjk
     papirus-icon-theme
     nwg-look
 )
