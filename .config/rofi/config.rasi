@@ -23,7 +23,7 @@ configuration {
     fg-col:       #eceff4;
     fg-muted:     #d8dee9;
     grey:         #4c566a;
-    font:         "CaskaydiaCove Nerd Font 11";
+    font:         "Inter 11";
     border-radius: 0px;
     background-color: transparent;
     text-color:   @fg-col;
