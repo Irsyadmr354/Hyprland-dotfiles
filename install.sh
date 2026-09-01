@@ -114,7 +114,7 @@ PACKAGES=(
     xdg-desktop-portal-gtk
     qt5-wayland
     qt6-wayland
-    ttf-jetbrains-mono-nerd
+    ttf-cascadia-code-nerd inter-font
     noto-fonts
     noto-fonts-emoji
     noto-fonts-cjk
