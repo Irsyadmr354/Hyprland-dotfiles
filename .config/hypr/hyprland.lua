@@ -173,6 +173,8 @@ hl.bind(mainMod .. " + W",     hl.dsp.exec_cmd("/home/royan/.config/hypr/scripts
 hl.bind(mainMod .. " + N",     hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mainMod .. " + Tab",         hl.dsp.focus({ workspace = "m+1" }))
 hl.bind(mainMod .. " + SHIFT + Tab",   hl.dsp.focus({ workspace = "m-1" }))
+hl.bind("ALT + Tab",                  hl.dsp.exec_cmd("hyprctl dispatch cyclenext"))
+hl.bind("ALT + SHIFT + Tab",          hl.dsp.exec_cmd("hyprctl dispatch cyclenext prev"))
 hl.bind(mainMod .. " + L",            hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + X",            hl.dsp.exec_cmd("/home/royan/.config/hypr/scripts/powermenu.sh"))
 hl.bind(mainMod .. " + M",            hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
