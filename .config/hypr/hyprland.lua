@@ -91,20 +91,17 @@ hl.config({
 })
 
 -- Animation curves
-hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
-hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })
-hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}       } })
-hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
-hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
+hl.curve("smoothOut",     { type = "bezier", points = { {0.16, 1}, {0.3, 1} } })
+hl.curve("smoothIn",      { type = "bezier", points = { {0.7, 0}, {0.84, 0} } })
 
-hl.animation({ leaf = "global",        enabled = true,  speed = 6,   bezier = "easeOutQuint" })
-hl.animation({ leaf = "border",        enabled = true,  speed = 4,   bezier = "easeOutQuint" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 3.5, bezier = "easeOutQuint" })
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 3.5, bezier = "easeOutQuint", style = "popin 80%" })
-hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 3,   bezier = "easeOutQuint", style = "popin 80%" })
-hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 2,   bezier = "easeOutQuint" })
-hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 2,   bezier = "easeOutQuint" })
-hl.animation({ leaf = "workspaces",    enabled = true,  speed = 3.5, bezier = "easeOutQuint", style = "slide" })
+hl.animation({ leaf = "global",        enabled = true,  speed = 4,   bezier = "smoothOut" })
+hl.animation({ leaf = "border",        enabled = true,  speed = 3,   bezier = "smoothOut" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 3.5, bezier = "smoothOut" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 3.5, bezier = "smoothOut", style = "popin 85%" })
+hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 3,   bezier = "smoothOut", style = "popin 85%" })
+hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 2.5, bezier = "smoothOut" })
+hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 2,   bezier = "smoothOut" })
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 4,   bezier = "smoothOut", style = "slidefade 20%" })
 
 -----------------
 ---- LAYOUTS ----
