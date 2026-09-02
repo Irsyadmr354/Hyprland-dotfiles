@@ -91,17 +91,17 @@ hl.config({
 })
 
 -- Animation curves
-hl.curve("smoothOut",     { type = "bezier", points = { {0.16, 1}, {0.3, 1} } })
-hl.curve("smoothIn",      { type = "bezier", points = { {0.7, 0}, {0.84, 0} } })
+hl.curve("md3_decel", { type = "bezier", points = { {0.05, 0.7},  {0.1, 1} } })
+hl.curve("md3_accel", { type = "bezier", points = { {0.3, 0},    {0.8, 0.15} } })
 
-hl.animation({ leaf = "global",        enabled = true,  speed = 4,   bezier = "smoothOut" })
-hl.animation({ leaf = "border",        enabled = true,  speed = 3,   bezier = "smoothOut" })
-hl.animation({ leaf = "windows",       enabled = true,  speed = 3.5, bezier = "smoothOut" })
-hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 3.5, bezier = "smoothOut", style = "popin 85%" })
-hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 3,   bezier = "smoothOut", style = "popin 85%" })
-hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 2.5, bezier = "smoothOut" })
-hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 2,   bezier = "smoothOut" })
-hl.animation({ leaf = "workspaces",    enabled = true,  speed = 4,   bezier = "smoothOut", style = "slidefade 20%" })
+hl.animation({ leaf = "global",        enabled = true,  speed = 4,   bezier = "md3_decel" })
+hl.animation({ leaf = "border",        enabled = true,  speed = 3,   bezier = "md3_decel" })
+hl.animation({ leaf = "windows",       enabled = true,  speed = 3.8, bezier = "md3_decel" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 3.5, bezier = "md3_decel", style = "slide" })
+hl.animation({ leaf = "windowsOut",    enabled = true,  speed = 3,   bezier = "md3_accel", style = "slide" })
+hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 2.5, bezier = "md3_decel" })
+hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 2,   bezier = "md3_accel" })
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 4,   bezier = "md3_decel", style = "slidefadevert 30%" })
 
 -----------------
 ---- LAYOUTS ----
