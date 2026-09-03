@@ -7,7 +7,7 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 # 2. Polkit & Keyring (VS Code credentials & secrets)
-/usr/lib/polkit-kde-authentication-agent-1 &
+pgrep -x hyprpolkitagent >/dev/null || /usr/lib/hyprpolkitagent/hyprpolkitagent &
 eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh 2>/dev/null)
 export SSH_AUTH_SOCK
 
