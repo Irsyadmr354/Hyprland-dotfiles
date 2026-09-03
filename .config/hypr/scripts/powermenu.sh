@@ -4,7 +4,7 @@
 
 OPTIONS="󰌾  Lock\n󰤄  Suspend\n󰍃  Logout\n󰑐  Reboot\n󰐥  Shutdown"
 
-CHOSEN=$(echo -e "$OPTIONS" | rofi -dmenu \
+CHOSEN=$(echo -e "$OPTIONS" | rofi -dmenu -click-to-exit -kb-cancel Escape \
     -p "Power" \
     -theme-str '
     window {
@@ -12,25 +12,27 @@ CHOSEN=$(echo -e "$OPTIONS" | rofi -dmenu \
         anchor: center;
         width: 260px;
         height: 250px;
-        border: 2px;
-        border-color: #88c0d0;
-        background-color: #2e3440;
+        border: 1px;
+        border-color: #333333;
+        background-color: #141414;
+        border-radius: 14px;
     }
     mainbox {
-        background-color: #2e3440;
+        background-color: #141414;
         padding: 12px;
         children: [ inputbar, listview ];
         spacing: 10px;
     }
     inputbar {
-        background-color: #3b4252;
+        background-color: #1E1E1E;
         border: 1px;
-        border-color: #434c5e;
+        border-color: #333333;
+        border-radius: 10px;
         padding: 4px;
         children: [ prompt ];
     }
     prompt {
-        text-color: #88c0d0;
+        text-color: #EDEDED;
         font-weight: bold;
         padding: 2px 6px;
     }
@@ -43,12 +45,14 @@ CHOSEN=$(echo -e "$OPTIONS" | rofi -dmenu \
     element {
         padding: 6px 10px;
         background-color: transparent;
-        text-color: #eceff4;
+        text-color: #EDEDED;
+        border-radius: 8px;
     }
     element selected {
-        background-color: #88c0d0;
-        text-color: #2e3440;
+        background-color: #EDEDED;
+        text-color: #141414;
         font-weight: bold;
+        border-radius: 8px;
     }
     ')
 

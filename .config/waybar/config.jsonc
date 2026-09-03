@@ -1,12 +1,12 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 30,
+    "height": 36,
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
     "margin-bottom": 0,
-    "spacing": 2,
+    "spacing": 4,
 
     "modules-left": [
         "custom/arch",

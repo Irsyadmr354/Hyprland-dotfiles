@@ -1,101 +1,35 @@
-/* NORD THEME PALETTE:
-   Polar Night: #2e3440, #3b4252, #434c5e, #4c566a
-   Snow Storm:  #d8dee9, #e5e9f0, #eceff4
-   Frost:       #8fbcbb, #88c0d0, #81a1c1, #5e81ac
-   Aurora:      #bf616a, #d08770, #ebcb8b, #a3be8c, #b48ead
-*/
-
 * {
-    border: none;
-    border-radius: 0px;
     font-family: "Inter", "CaskaydiaCove Nerd Font", sans-serif;
     font-size: 12.5px;
     font-weight: 600;
     min-height: 0;
     margin: 0;
     padding: 0;
+    border: none;
+    border-radius: 0;
 }
 
 window#waybar {
-    background-color: #2e3440;
-    border-bottom: 2px solid #434c5e;
-    color: #eceff4;
+    background: #141414;
+    border-bottom: 1px solid #2A2A2A;
+    color: #EDEDED;
+    border-radius: 0;
 }
 
-/* ARCH LOGO */
-#custom-arch {
-    color: #88c0d0;
-    font-size: 14px;
-    padding: 0 10px;
-    background-color: #3b4252;
-    border-right: 1px solid #4c566a;
-}
-
-#custom-arch:hover {
-    background-color: #434c5e;
-    color: #8fbcbb;
-}
-
-/* WORKSPACES */
-#workspaces {
-    background-color: transparent;
-    padding: 0 4px;
-}
-
-#workspaces button {
-    padding: 0 9px;
-    color: #4c566a; /* Empty workspace is dim */
+.modules-left,
+.modules-center,
+.modules-right {
     background: transparent;
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s ease;
+    border: none;
+    border-radius: 0;
+    padding: 0 6px;
+    margin: 0;
 }
 
-#workspaces button:hover {
-    color: #eceff4;
-    background-color: #3b4252;
-}
-
-#workspaces button.visible,
-#workspaces button:not(.empty) {
-    color: #ebcb8b; /* Workspace with open apps is warm gold/aurora */
-    font-weight: bold;
-}
-
-#workspaces button.active {
-    color: #88c0d0; /* Active workspace is bright Frost Cyan */
-    border-bottom: 2px solid #88c0d0;
-    background-color: #3b4252;
-    font-weight: bold;
-}
-
-#workspaces button.urgent {
-    color: #bf616a;
-    border-bottom: 2px solid #bf616a;
-    background-color: rgba(191, 97, 106, 0.2);
-}
-
-/* WINDOW TITLE */
-#window {
-    color: #d8dee9;
-    padding: 0 12px;
-    font-weight: 500;
-}
-
-#window span {
-    color: #81a1c1;
-    font-weight: bold;
-}
-
-/* CENTER CLOCK */
-#clock {
-    color: #eceff4;
-    background-color: #3b4252;
-    border-left: 1px solid #4c566a;
-    border-right: 1px solid #4c566a;
-    padding: 0 14px;
-}
-
-/* RIGHT MODULES */
+#custom-arch,
+#workspaces,
+#window,
+#clock,
 #pulseaudio,
 #backlight,
 #bluetooth,
@@ -105,12 +39,88 @@ window#waybar {
 #disk,
 #battery,
 #custom-notification {
-    padding: 0 10px;
-    margin: 2px 2px;
-    background-color: #3b4252;
-    border: 1px solid #434c5e;
-    color: #eceff4;
-    transition: all 0.15s ease;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #EDEDED;
+    padding: 0 9px;
+    margin: 0;
+    min-height: 34px;
+}
+
+#custom-arch {
+    font-size: 15px;
+    color: #FFFFFF;
+}
+
+#custom-arch:hover {
+    color: #FFFFFF;
+    background: #1E1E1E;
+    border-radius: 0;
+}
+
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    color: #8A8A8A;
+    padding: 0 9px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    min-height: 34px;
+}
+
+#workspaces button:hover {
+    color: #FFFFFF;
+    background: #1E1E1E;
+    border-radius: 0;
+}
+
+#workspaces button.active {
+    color: #141414;
+    background: #EDEDED;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+#workspaces button.active label,
+#workspaces button.active image {
+    color: #141414;
+}
+
+#workspaces button.visible:not(.empty),
+#workspaces button:not(.empty) {
+    color: #EDEDED;
+}
+
+#workspaces button.urgent {
+    background: #E5484D;
+    color: #FFFFFF;
+    border-radius: 0;
+    font-weight: bold;
+}
+
+#window {
+    color: #EDEDED;
+    font-weight: 500;
+}
+
+#window.empty {
+    background: transparent;
+}
+
+#window span {
+    color: #EDEDED;
+    font-weight: bold;
+}
+
+#clock {
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 0 12px;
 }
 
 #pulseaudio:hover,
@@ -122,47 +132,47 @@ window#waybar {
 #disk:hover,
 #battery:hover,
 #custom-notification:hover {
-    background-color: #434c5e;
-    border-color: #4c566a;
+    color: #FFFFFF;
+    background: #1E1E1E;
+    border-radius: 0;
 }
 
-/* Nord Colors */
-#pulseaudio { color: #ebcb8b; }
-#backlight  { color: #ebcb8b; }
-#bluetooth  { color: #81a1c1; }
-#network    { color: #a3be8c; }
-#cpu        { color: #88c0d0; }
-#memory     { color: #d08770; }
-#disk       { color: #b48ead; }
-#battery    { color: #a3be8c; }
-
 #pulseaudio.muted {
-    background-color: #bf616a;
-    color: #2e3440;
-    border-color: #bf616a;
+    color: #E5484D;
 }
 
 #network.disconnected {
-    border-color: #bf616a;
-    color: #bf616a;
-}
-
-#battery.charging, #battery.plugged {
-    color: #8fbcbb;
+    color: #E5484D;
 }
 
 #battery.warning:not(.charging) {
-    border-color: #d08770;
-    color: #d08770;
+    color: #E8A13C;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #bf616a;
-    color: #2e3440;
-    border-color: #bf616a;
+    background: #E5484D;
+    color: #FFFFFF;
+    border-radius: 0;
+    font-weight: bold;
 }
 
-#custom-notification {
-    color: #88c0d0;
-    padding: 0 10px;
+#battery.charging,
+#battery.plugged {
+    color: #EDEDED;
+}
+
+#bluetooth.off,
+#bluetooth.disabled {
+    color: #8A8A8A;
+}
+
+tooltip {
+    background: #1E1E1E;
+    border: 1px solid #333333;
+    border-radius: 0;
+    color: #EDEDED;
+}
+
+tooltip label {
+    color: #EDEDED;
 }

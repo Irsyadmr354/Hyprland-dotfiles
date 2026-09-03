@@ -47,14 +47,14 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -----------------------
 hl.config({
     general = {
-        gaps_in  = 2,
-        gaps_out = 4,
+        gaps_in  = 6,
+        gaps_out = 12,
 
-        border_size = 1,
+        border_size = 2,
 
         col = {
-            active_border   = { colors = {"rgba(88c0d0ff)", "rgba(81a1c1ff)"}, angle = 45 },
-            inactive_border = "rgba(4c566aaa)",
+            active_border   = { colors = {"rgba(edededff)", "rgba(8a8a8aff)"}, angle = 45 },
+            inactive_border = "rgba(333333aa)",
         },
 
         resize_on_border = true,
@@ -63,25 +63,26 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 0,
-        rounding_power = 0,
+        rounding       = 14,
+        rounding_power = 2,
 
         active_opacity   = 1.0,
         inactive_opacity = 0.95,
 
         shadow = {
-            enabled      = false,
-            range        = 10,
-            render_power = 2,
-            color        = 0x6611111b,
+            enabled      = true,
+            range        = 16,
+            render_power = 3,
+            color        = 0x66000000,
         },
 
         blur = {
-            enabled          = false,
-            size             = 5,
-            passes           = 2,
-            vibrancy         = 0.1696,
+            enabled           = true,
+            size              = 6,
+            passes            = 2,
+            vibrancy          = 0.1696,
             new_optimizations = true,
+            xray              = false,
         },
     },
 

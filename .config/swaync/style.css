@@ -1,45 +1,101 @@
 * {
-  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-family: "Inter", "JetBrainsMono Nerd Font", sans-serif;
   font-size: 13px;
-  border-radius: 0px;
 }
 
 .control-center {
-  background: #2e3440;
-  border-radius: 0px;
-  border: 1px solid #88c0d0;
-  padding: 12px;
-  color: #eceff4;
+  background: rgba(20, 20, 20, 0.95);
+  border-radius: 14px;
+  border: 1px solid rgba(237, 237, 237, 0.18);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  padding: 16px;
+  color: #EDEDED;
 }
 
 .notification-row {
   outline: none;
-  margin: 5px;
+  margin: 6px 0;
 }
 
 .notification-background {
-  background: #3b4252;
-  border-radius: 0px;
-  padding: 10px;
-  border: 1px solid #434c5e;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 14px;
+  padding: 12px;
+  border: 1px solid rgba(237, 237, 237, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
 .notification-title {
   font-weight: bold;
-  color: #88c0d0;
+  color: #FFFFFF;
+  font-size: 13.5px;
 }
 
 .notification-body {
-  color: #eceff4;
+  color: #B8B8B8;
+  font-size: 12.5px;
 }
 
 .widget-title {
-  color: #81a1c1;
+  color: #EDEDED;
   font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.widget-title > button {
+  background: #2A2A2A;
+  border: 1px solid rgba(237, 237, 237, 0.15);
+  border-radius: 10px;
+  color: #EDEDED;
+  padding: 4px 10px;
+}
+
+.widget-title > button:hover {
+  background: #EDEDED;
+  color: #141414;
 }
 
 .widget-dnd {
-  border-radius: 0px;
-  background: #434c5e;
-  padding: 6px;
+  border-radius: 12px;
+  background: #1E1E1E;
+  border: 1px solid rgba(237, 237, 237, 0.12);
+  padding: 8px 12px;
+  margin: 6px 0;
 }
+
+.widget-dnd > switch {
+  border-radius: 12px;
+  background: #333333;
+}
+
+.widget-dnd > switch:checked {
+  background: #EDEDED;
+}
+
+/* Sliders */
+trough {
+  border-radius: 12px;
+  background: #333333;
+  min-height: 8px;
+}
+
+highlight {
+  border-radius: 12px;
+  background: #EDEDED;
+}
+
+slider {
+  border-radius: 50%;
+  background: #FFFFFF;
+  min-height: 14px;
+  min-width: 14px;
+}
+
+/* Thin scrollbar: trough transparan, slider tipis; scroll roda mouse tetap jalan */
+scrollbar { background: transparent; border: none; min-width: 6px; }
+scrollbar trough { background: transparent; border: none; min-width: 6px; }
+scrollbar slider { background: rgba(237, 237, 237, 0.22); border: none; border-radius: 3px; min-width: 6px; min-height: 30px; }
+scrollbar slider:hover { background: rgba(237, 237, 237, 0.4); }
+progressbar trough { background: rgba(237, 237, 237, 0.15); border-radius: 4px; border: none; min-height: 8px; }
+progressbar trough progress { background: #EDEDED; border-radius: 4px; border: none; }
