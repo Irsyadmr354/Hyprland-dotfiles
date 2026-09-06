@@ -50,7 +50,9 @@ hl.config({
         gaps_in  = 8,
         gaps_out = 12,
 
-	border_size = 0,
+        border_size = 2,
+        ["col.active_border"] = "0xffffffff",
+        ["col.inactive_border"] = "0x88ffffff",
 
         resize_on_border = true,
         allow_tearing    = false,
@@ -61,8 +63,8 @@ hl.config({
         rounding       = 12,
         rounding_power = 2,
 
-        active_opacity   = 1.0,
-        inactive_opacity = 0.8,
+        active_opacity   = 0.88,
+        inactive_opacity = 0.78,
 
         shadow = {
             enabled      = true,
@@ -72,12 +74,14 @@ hl.config({
         },
 
         blur = {
-            enabled           = true,
-            size              = 6,
-            passes            = 1,
-            vibrancy          = 0.1696,
-            new_optimizations = true,
-            xray              = false,
+            enabled            = true,
+            size               = 8,
+            passes             = 2,
+            vibrancy           = 0.1696,
+            new_optimizations  = true,
+            xray               = false,
+            popups             = true,
+            popups_ignorealpha = 0.2,
         },
     },
 

@@ -58,6 +58,13 @@ PACKAGES=(
     swaybg
     hyprlock
     hypridle
+    hyprpolkitagent
+    libnotify
+    psmisc
+    qt6ct
+    ttf-jetbrains-mono-nerd
+    iwd
+    networkmanager
     swaync
     pipewire
     pipewire-alsa
@@ -173,6 +180,10 @@ application/xml=code.desktop
 text/xml=code.desktop
 text/x-yaml=code.desktop
 application/x-yaml=code.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
 MIMEOF
 
 # Set default terminal editor in ~/.bashrc
@@ -186,6 +197,7 @@ echo -e "${YELLOW}==> [6/7] Enabling system background services...${NC}"
 sudo systemctl enable --now bluetooth.service 2>/dev/null || true
 sudo systemctl enable --now power-profiles-daemon.service 2>/dev/null || true
 sudo systemctl enable --now ufw.service 2>/dev/null || true
+sudo systemctl enable --now iwd.service 2>/dev/null || true
 
 # UFW initial rules
 sudo ufw default deny incoming 2>/dev/null || true
@@ -198,4 +210,3 @@ echo "  INSTALLATION COMPLETED SUCCESSFULLY!"
 echo "======================================================${NC}"
 echo -e "${CYAN}Semua konfigurasi Hyprland Nord Minimalist Sharp siap digunakan.${NC}"
 echo -e "${YELLOW}Silakan logout / restart laptop Anda untuk menikmati pengalaman penuh.${NC}\n"
-EOF
