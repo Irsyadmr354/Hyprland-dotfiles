@@ -5,35 +5,48 @@
 
 .control-center {
   background: rgba(20, 20, 20, 0.95);
-  border-radius: 14px;
-  border: 1px solid rgba(237, 237, 237, 0.18);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border-radius: 0px;
+  border-left: 1px solid rgba(237, 237, 237, 0.18);
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  box-shadow: none;
   padding: 16px;
   color: #EDEDED;
 }
 
 .notification-row {
   outline: none;
-  margin: 6px 0;
+  margin: 4px 0;
+  background: transparent;
 }
 
 .notification-background {
-  background: rgba(30, 30, 30, 0.95);
+  background: rgba(12, 15, 22, 0.92);
   border-radius: 14px;
-  padding: 12px;
-  border: 1px solid rgba(237, 237, 237, 0.12);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  padding: 14px 16px;
+  color: #ffffff;
+}
+
+.notification {
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .notification-title {
-  font-weight: bold;
-  color: #FFFFFF;
+  font-weight: 700;
+  color: #ffffff;
   font-size: 13.5px;
+  margin-bottom: 2px;
 }
 
 .notification-body {
-  color: #B8B8B8;
-  font-size: 12.5px;
+  color: #e0e0e0;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .widget-title {
@@ -97,5 +110,23 @@ scrollbar { background: transparent; border: none; min-width: 6px; }
 scrollbar trough { background: transparent; border: none; min-width: 6px; }
 scrollbar slider { background: rgba(237, 237, 237, 0.22); border: none; border-radius: 3px; min-width: 6px; min-height: 30px; }
 scrollbar slider:hover { background: rgba(237, 237, 237, 0.4); }
-progressbar trough { background: rgba(237, 237, 237, 0.15); border-radius: 4px; border: none; min-height: 8px; }
-progressbar trough progress { background: #EDEDED; border-radius: 4px; border: none; }
+progressbar {
+  min-height: 6px;
+  border-radius: 6px;
+  background: transparent;
+  margin-top: 6px;
+}
+
+progressbar trough {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  border: none;
+  min-height: 6px;
+}
+
+progressbar trough progress {
+  background: #ffffff;
+  border-radius: 6px;
+  border: none;
+  min-height: 6px;
+}

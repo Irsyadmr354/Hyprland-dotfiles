@@ -19,7 +19,7 @@ configuration {
     bg-col:       #141414;
     bg-sub:       #1E1E1E;
     bg-active:    #2A2A2A;
-    border-col:   #EDEDED;
+    border-col:   #EDEDED2E;
     selected-col: #FFFFFF;
     fg-col:       #EDEDED;
     fg-muted:     #8A8A8A;
@@ -34,15 +34,15 @@ configuration {
 }
 
 window {
-    height: 98%;
+    height: 100%;
     width: 380px;
-    location: northwest;
-    anchor: northwest;
-    x-offset: 14px;
-    y-offset: 10px;
-    border: 1px;
+    location: west;
+    anchor: west;
+    x-offset: 0px;
+    y-offset: 0px;
+    border: 0px 1px 0px 0px;
     border-color: @border-col;
-    border-radius: 14px;
+    border-radius: 0px;
     background-color: @bg-col;
 }
 

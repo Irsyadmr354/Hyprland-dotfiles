@@ -1,106 +1,69 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 36,
-    "margin-top": 0,
-    "margin-left": 0,
-    "margin-right": 0,
-    "margin-bottom": 0,
-    "spacing": 4,
-
+    "height": 34,
+    "spacing": 0,
     "modules-left": [
         "custom/arch",
         "hyprland/workspaces",
         "hyprland/window"
     ],
+    "hyprland/window": {
+        "format": "{class}",
+        "max-length": 35,
+        "separate-outputs": true,
+        "rewrite": {
+            "": "Arch Linux"
+        }
+    },
     "modules-center": [
         "clock"
     ],
     "modules-right": [
         "pulseaudio",
         "backlight",
-        "bluetooth",
         "network",
-        "cpu",
-        "memory",
-        "disk",
         "battery",
         "custom/notification"
     ],
-
     "custom/arch": {
         "format": "󰣇",
         "tooltip": false,
         "on-click": "rofi -show drun"
     },
-
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "format": "{name} {icon}",
-        "format-icons": {
-            "active": "󰮯",
-            "occupied": "󰊠",
-            "urgent": "󰀨",
-            "default": "·"
-        },
-        "persistent-workspaces": {
-            "*": 5
-        }
+        "format": "{name}",
+        "on-click": "activate"
     },
-
-    "hyprland/window": {
-        "format": "<span>{class}</span> {title}",
-        "max-length": 40,
-        "separate-outputs": true
-    },
-
     "clock": {
-        "format": "󰥔  {:%H:%M   󰸗  %a, %d %b %Y}",
-        "interval": 60,
+        "format": "{:%H:%M   •   %A, %d %B %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-
-    "cpu": {
-        "format": "󰍛  {usage}%",
-        "tooltip": true,
-        "interval": 2,
-        "on-click": "kitty -e btop"
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟  Muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
     },
-
-    "memory": {
-        "format": "󰘚  {percentage}%",
-        "tooltip-format": "RAM: {used:0.1f}G / {total:0.1f}G\nSwap: {swapUsed:0.1f}G / {swapTotal:0.1f}G",
-        "interval": 2,
-        "on-click": "kitty -e btop"
-    },
-
-    "disk": {
-        "format": "󰋊  {percentage_used}%",
-        "tooltip-format": "Disk Used: {used} / {total}\nFree: {free}",
-        "interval": 30,
-        "path": "/"
-    },
-
     "backlight": {
         "format": "{icon}  {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "~/.config/hypr/scripts/brightness.sh raise",
-        "on-scroll-down": "~/.config/hypr/scripts/brightness.sh lower"
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
-
-    "bluetooth": {
-        "format": "󰂯  {status}",
-        "format-connected": "󰂱  {device_alias}",
-        "format-connected-battery": "󰂱  {device_alias} {device_battery_percentage}%",
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "on-click": "kitty -e bluetuith"
+    "network": {
+        "format-wifi": "󰖩  {essid}",
+        "format-ethernet": "󰈀  {ipaddr}",
+        "format-disconnected": "󰖪  Offline",
+        "tooltip-format": "{signalStrength}% | {ipaddr}",
+        "on-click": "kitty -e impala || kitty -e nmtui"
     },
-
     "battery": {
         "states": {
-            "warning": 20,
-            "critical": 10
+            "warning": 30,
+            "critical": 15
         },
         "format": "{icon}  {capacity}%",
         "format-charging": "󰂄  {capacity}%",
@@ -108,32 +71,6 @@
         "format-alt": "{icon}  {time}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
-
-    "network": {
-        "format-wifi": "󰖩  {essid} ({signalStrength}%)",
-        "format-ethernet": "󰈀  {ipaddr}/{cidr}",
-        "format-disconnected": "󰖪  Offline",
-        "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}",
-        "on-click": "kitty -e impala || kitty -e nmtui"
-    },
-
-    "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "󰝟  Muted",
-        "format-icons": {
-            "headphone": "󰋋",
-            "hands-free": "󰋎",
-            "headset": "󰋎",
-            "phone": "󰏲",
-            "portable": "󰏲",
-            "car": "󰄋",
-            "default": ["󰕿", "󰖀", "󰕾"]
-        },
-        "on-click": "pavucontrol",
-        "on-scroll-up": "~/.config/hypr/scripts/volume.sh raise",
-        "on-scroll-down": "~/.config/hypr/scripts/volume.sh lower"
-    },
-
     "custom/notification": {
         "tooltip": false,
         "format": "{icon}",
