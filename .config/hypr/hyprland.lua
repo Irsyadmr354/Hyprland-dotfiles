@@ -47,8 +47,8 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -----------------------
 hl.config({
     general = {
-        gaps_in  = 8,
-        gaps_out = 12,
+        gaps_in  = 6,
+        gaps_out = 8,
 
         border_size = 1,
         ["col.active_border"] = "0xffffffff",
