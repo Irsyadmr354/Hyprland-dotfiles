@@ -47,8 +47,8 @@ hl.env("XDG_SESSION_DESKTOP", "Hyprland")
 -----------------------
 hl.config({
     general = {
-        gaps_in  = 6,
-        gaps_out = 8,
+        gaps_in  = 4,
+        gaps_out = 1,
 
         border_size = 1,
         ["col.active_border"] = "0xffffffff",
@@ -60,9 +60,6 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 8,
-        rounding_power = 2,
-
         active_opacity   = 0.88,
         inactive_opacity = 0.78,
 
